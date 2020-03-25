@@ -16,8 +16,8 @@ class PostsTableSeeder extends Seeder
     {
       for ($i=0; $i < 10 ; $i++) {
         $newPost = new Post();
-        $newPost->slug = Str::slug($newPost->titolo);
         $newPost->titolo = $faker->sentence($nbWords = 6, $variableNbWords = true);
+        $newPost->slug = Str::slug($newPost->titolo);
         $newPost->img = $faker->imageUrl($width = 640, $height = 480);
         $newPost->descrizione = $faker->text($maxNbChars = 600) ;
         $newPost->autore = $faker->name;
