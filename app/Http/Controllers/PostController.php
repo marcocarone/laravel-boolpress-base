@@ -95,11 +95,12 @@ class PostController extends Controller
         $data = $request->all();
         $request->validate($this->validationPost);
 
-        
+        $post->fill($data);
         $updated = $post->update($data);
 
         if($updated) {
-          return redirect()->route('post.show', $post);
+
+          return redirect()->route('posts.show', $post);
         }
     }
 
@@ -111,6 +112,7 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        //
+      $post->delete();
+      return redirect()->route('posts.index');
     }
 }
