@@ -10,5 +10,8 @@ class Avatar extends Model
     "img",
     "user_id"
 ];
-
+public function user()
+{
+return $this->belongsTo('App\User');
+}
 }

@@ -10,7 +10,7 @@
     <div class="card m-2">
 
         <div class="card-body">
-            {{-- <img class="card-img-top" src="{{$photo->img}}" alt=""> --}}
+            <img class="img-thumbnail" src="{{$user->avatar->img}}" alt="">
             <h3 class="card-text "> ID utente: {{$user->id}}</h3>
             <h2 class="card-text mt-3"> Nome: {{$user->name}}</h2>
             <h3 class="card-text "> Email: {{$user->email}}</h3>

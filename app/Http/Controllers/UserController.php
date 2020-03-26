@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Avatar;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -15,6 +15,7 @@ class UserController extends Controller
     public function index()
     {
         $users = User::all();
+        // $avatars = Avatar::all();
         return view("users.index", compact("users"));
     }
 
