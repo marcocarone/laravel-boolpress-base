@@ -4,6 +4,7 @@
 
 
 <div class="container-xl margin50">
+
     @foreach ($users as $user)
 
     <div class="card m-2">
