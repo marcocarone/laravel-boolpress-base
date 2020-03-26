@@ -24,6 +24,9 @@
           <li class="nav-item active">
             <a class="nav-link" href="{{route("posts.index")}}">Notizie<span class="sr-only"></span></a>
           </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="{{route("photos.index")}}">Galleria fotografica<span class="sr-only"></span></a>
+          </li>
         </ul>
       </div>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
