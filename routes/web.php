@@ -15,3 +15,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'PostController@index')->name("home");
 Route::resource('posts', 'PostController');
 Route::resource('photos', 'PhotoController');
+Route::resource('users', 'UserController');
