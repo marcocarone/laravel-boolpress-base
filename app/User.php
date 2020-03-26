@@ -18,7 +18,10 @@ class User extends Authenticatable
     protected $fillable = [
         'name', 'email', 'password',
     ];
-
+    public function photos()
+    {
+        return $this->hasMany('App\Photo');
+    }
     /**
      * The attributes that should be hidden for arrays.
      *
