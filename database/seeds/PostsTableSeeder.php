@@ -18,7 +18,7 @@ class PostsTableSeeder extends Seeder
         $newPost = new Post();
         $newPost->titolo = $faker->sentence($nbWords = 6, $variableNbWords = true);
         $newPost->slug = Str::slug($newPost->titolo);
-        $newPost->img = $faker->imageUrl($width = 640, $height = 480);
+        $newPost->img = 'https://picsum.photos/id/'. rand(1, 100) .'/300/200';
         $newPost->descrizione = $faker->text($maxNbChars = 600) ;
         $newPost->autore = $faker->name;
         $newPost->save();
