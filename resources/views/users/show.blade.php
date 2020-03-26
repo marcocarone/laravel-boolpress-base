@@ -13,12 +13,14 @@
             <h3 class="card-text "> ID utente: {{$user->id}}</h3>
             <h2 class="card-text mt-3"> Nome: {{$user->name}}</h2>
             <h3 class="card-text "> Email: {{$user->email}}</h3>
-            @foreach ($user->photos as $photo)
+
             <div class="card-body">
                 <h2 class="card-text mt-3"> Foto caricate:</h2>
-                <img class="card-img-top" src="{{$photo->img}}" alt="">
+                @foreach ($user->photos as $photo)
+                <img class="card-img-top mb-3" src="{{$photo->img}}" alt="">
+                @endforeach
             </div>
-            @endforeach
+
         </div>
     </div>
 
